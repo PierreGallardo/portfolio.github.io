@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veille Technologique - Portfolio Gallardo Pierre</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+<header class="bg-gray-900 text-white py-2 shadow-md">
+  <div class="container mx-auto flex justify-between items-center px-6">
+    <!-- Logo as a link -->
+    <a href="../index.html" class="flex items-center focus:outline-none">
+      <img src="../images/logo_pierre.png" alt="Logo Pierre Gallardo" class="h-16" />
+    </a>
+    <!-- Hamburger button (mobile only) -->
+    <button id="menu-toggle" class="lg:hidden flex items-center p-2 focus:outline-none" aria-label="Ouvrir le menu">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+    <!-- Navigation Menu -->
+    <nav>
+      <ul id="menu" class="flex-col lg:flex-row flex lg:flex space-y-4 lg:space-y-0 lg:space-x-6 absolute lg:static top-20 left-0 w-full lg:w-auto bg-gray-900 lg:bg-transparent px-6 lg:px-0 z-20 transition-all duration-200 ease-in-out hidden lg:flex">
+        <li><a href="../index.html" class="hover:text-blue-400 block py-2">Accueil</a></li>
+        <li><a href="monCV.html" class="hover:text-blue-400 block  py-2">Mon CV</a></li>
+        <li><a href="mesProjets.html" class="hover:text-blue-400 block py-2">Mes projets</a></li>
+        <li><a href="mesCertifications.html" class="hover:text-blue-400 block py-2">Mes certifications</a></li>
+        <li><a href="veilleTechnologique.html" class="hover:text-blue-400 block font-semibold py-2">Veille technologique</a></li>
+        <li><a href="stages.html" class="hover:text-blue-400 block py-2">Stages & Expériences</a></li>
+        <li><a href="passion.html" class="hover:text-blue-400 block py-2">Passions</a></li>
+      </ul>
+    </nav>
+  </div>
+  <script>
+    // Simple toggle for menu
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+    // Optionally: close menu when link clicked (on mobile)
+    document.querySelectorAll('#menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        if(window.innerWidth < 1024) menu.classList.add('hidden');
+      });
+    });
+  </script>
+</header>
+
+<main class="container mx-auto px-6 py-12">
+  <h2 class="text-4xl font-bold text-center mb-12">Veille Technologique</h2>
+  <p class="text-lg text-center mb-10 max-w-2xl mx-auto">
+    Passionné par l'informatique, je m'intéresse particulièrement aux dernières avancées du matériel informatique et à l'évolution rapide de l'intelligence artificielle, notamment ChatGPT d'OpenAI.
+    La veille technologique me permet de rester informé et de comprendre les enjeux et opportunités liés à ces innovations.
+  </p>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <!-- Matériel informatique -->
+    <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+      <img src="../images/photo_rtx4080.png" alt="Matériel informatique" class="rounded-lg mb-4 mx-auto w-32 h-32 object-cover">
+      <h3 class="text-2xl font-semibold mb-2">Dernières nouveautés matériel informatique</h3>
+      <p class="text-gray-700 mb-4">
+        Je suis de près l'évolution du matériel : processeurs, cartes graphiques, SSD, écrans, etc.<br>
+        Les dernières générations de composants (Intel, AMD, NVIDIA) offrent des gains de puissance et d'efficacité remarquables.<br>
+      </p>
+      <ul class="list-disc pl-6 text-gray-600 mb-4">
+        <li>Processeurs Intel & AMD dernière génération</li>
+        <li>Cartes graphiques RTX 4000, Radeon RX 7000</li>
+        <li>SSD NVMe toujours plus rapides</li>
+        <li>Moniteurs gaming haute fréquence</li>
+      </ul>
+    </div>
+
+    <!-- ChatGPT & IA -->
+    <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+      <img src="../images/logo_chatgpt.png" alt="ChatGPT" class="rounded-lg mb-4 mx-auto object-cover bg-white">
+      <h3 class="text-2xl font-semibold mb-2">Actualités ChatGPT & Intelligence Artificielle</h3>
+      <p class="text-gray-700 mb-4">
+        L'IA, et en particulier ChatGPT, révolutionne la manière dont nous interagissons avec la technologie.<br>
+        Je m'intéresse aux dernières nouveautés sur les modèles GPT, les applications, les usages professionnels et les questions éthiques.<br>
+      </p>
+      <ul class="list-disc pl-6 text-gray-600 mb-4">
+        <li>Progrès de ChatGPT : nouvelles versions, plugins, intégrations</li>
+        <li>Utilisations concrètes dans l'éducation, le support, la création</li>
+        <li>Questions de sécurité et de confidentialité</li>
+        <li>Impact de l'IA sur les métiers du numérique</li>
+      </ul>
+    </div>
+
+  </div>
+</main>
+
+<footer class="bg-gray-800 text-gray-400 py-6 text-center mt-12">
+  <p>&copy; 2025 - GALLARDO Pierre - Étudiant BTS SIO</p>
+  <p>
+    <a href="contact.html" class="hover:text-white">Contact</a> • 
+    <a href="https://www.lyceepergaud.fr/" target="_blank" class="hover:text-white">Lycée Louis Pergaud</a> • 
+    <a href="#top" class="hover:text-white">Retour en haut</a>
+  </p>
+</footer>
+
+</body>
+</html>

@@ -8,23 +8,46 @@
 </head>
 <body class="bg-gray-100 text-gray-900">
 
-  <!-- Header -->
-  <header class="bg-gray-900 text-white py-2 shadow-md">
-    <div class="container mx-auto flex justify-between items-center px-6">
-      <img src="../images/logo_pierre.png" alt="Logo Pierre Gallardo" class="h-16">
-      <nav>
-        <ul class="flex space-x-6">
-          <li><a href="../index.html" class="hover:text-blue-400 ">Accueil</a></li>
-          <li><a href="monCV.html" class="hover:text-blue-400 font-semibold ">Mon CV</a></li>
-          <li><a href="mesProjets.html" class="hover:text-blue-400">Mes projets</a></li>
-          <li><a href="mesCertifications.html" class="hover:text-blue-400">Mes certifications</a></li>
-          <li><a href="veilleTechnologique.html" class="hover:text-blue-400">Veille technologique</a></li>
-          <li><a href="stages.html" class="hover:text-blue-400">Stages</a></li>
-          <li><a href="passion.html" class="hover:text-blue-400">Passions</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<header class="bg-gray-900 text-white py-2 shadow-md">
+  <div class="container mx-auto flex justify-between items-center px-6">
+    <!-- Logo as a link -->
+    <a href="../index.html" class="flex items-center focus:outline-none">
+      <img src="../images/logo_pierre.png" alt="Logo Pierre Gallardo" class="h-16" />
+    </a>
+    <!-- Hamburger button (mobile only) -->
+    <button id="menu-toggle" class="lg:hidden flex items-center p-2 focus:outline-none" aria-label="Ouvrir le menu">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+    <!-- Navigation Menu -->
+    <nav>
+      <ul id="menu" class="flex-col lg:flex-row flex lg:flex space-y-4 lg:space-y-0 lg:space-x-6 absolute lg:static top-20 left-0 w-full lg:w-auto bg-gray-900 lg:bg-transparent px-6 lg:px-0 z-20 transition-all duration-200 ease-in-out hidden lg:flex">
+        <li><a href="../index.html" class="hover:text-blue-400 block py-2">Accueil</a></li>
+        <li><a href="monCV.html" class="hover:text-blue-400 block font-semibold py-2">Mon CV</a></li>
+        <li><a href="mesProjets.html" class="hover:text-blue-400 block py-2">Mes projets</a></li>
+        <li><a href="mesCertifications.html" class="hover:text-blue-400 block py-2">Mes certifications</a></li>
+        <li><a href="veilleTechnologique.html" class="hover:text-blue-400 block py-2">Veille technologique</a></li>
+        <li><a href="stages.html" class="hover:text-blue-400 block py-2">Stages & Expériences</a></li>
+        <li><a href="passion.html" class="hover:text-blue-400 block py-2">Passions</a></li>
+      </ul>
+    </nav>
+  </div>
+  <script>
+    // Simple toggle for menu
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+    // Optionally: close menu when link clicked (on mobile)
+    document.querySelectorAll('#menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        if(window.innerWidth < 1024) menu.classList.add('hidden');
+      });
+    });
+  </script>
+</header>
 
   <!-- Section CV -->
   <main class="container mx-auto px-6 py-12 space-y-12">

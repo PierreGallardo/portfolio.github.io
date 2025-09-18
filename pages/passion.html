@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes Passions - Portfolio Gallardo Pierre</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+<header class="bg-gray-900 text-white py-2 shadow-md">
+  <div class="container mx-auto flex justify-between items-center px-6">
+    <!-- Logo as a link -->
+    <a href="../index.html" class="flex items-center focus:outline-none">
+      <img src="../images/logo_pierre.png" alt="Logo Pierre Gallardo" class="h-16" />
+    </a>
+    <!-- Hamburger button (mobile only) -->
+    <button id="menu-toggle" class="lg:hidden flex items-center p-2 focus:outline-none" aria-label="Ouvrir le menu">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+    <!-- Navigation Menu -->
+    <nav>
+      <ul id="menu" class="flex-col lg:flex-row flex lg:flex space-y-4 lg:space-y-0 lg:space-x-6 absolute lg:static top-20 left-0 w-full lg:w-auto bg-gray-900 lg:bg-transparent px-6 lg:px-0 z-20 transition-all duration-200 ease-in-out hidden lg:flex">
+        <li><a href="../index.html" class="hover:text-blue-400 block py-2">Accueil</a></li>
+        <li><a href="monCV.html" class="hover:text-blue-400 block  py-2">Mon CV</a></li>
+        <li><a href="mesProjets.html" class="hover:text-blue-400 block py-2">Mes projets</a></li>
+        <li><a href="mesCertifications.html" class="hover:text-blue-400 block py-2">Mes certifications</a></li>
+        <li><a href="veilleTechnologique.html" class="hover:text-blue-400 block  py-2">Veille technologique</a></li>
+        <li><a href="stages.html" class="hover:text-blue-400 block py-2">Stages & Expériences</a></li>
+        <li><a href="passion.html" class="hover:text-blue-400 block font-semibold py-2">Passions</a></li>
+      </ul>
+    </nav>
+  </div>
+  <script>
+    // Simple toggle for menu
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+    // Optionally: close menu when link clicked (on mobile)
+    document.querySelectorAll('#menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        if(window.innerWidth < 1024) menu.classList.add('hidden');
+      });
+    });
+  </script>
+</header>
+
+<main class="container mx-auto px-6 py-12">
+
+  <h2 class="text-3xl font-bold text-center mb-8">Mes Passions</h2>
+
+  <!-- Football -->
+  <div class="bg-white rounded-xl shadow-md p-6 mb-10 max-w-2xl mx-auto">
+    <h3 class="text-2xl font-semibold mb-4 text-blue-800 flex items-center gap-2">
+      Passion pour le Football
+    </h3>
+    <div class="flex justify-center items-center mb-4 gap-8">
+      <img src="../images/logo_football_club_valdahon_vercel.png" alt="Club de Football 1" class="h-20 w-auto rounded shadow">
+      <img src="../images/logo_asavoudrey.png" alt="Club de Football 2" class="h-20 w-auto rounded shadow">
+    </div>
+    <p class="text-gray-700">
+      Je pratique le football de puis l'âge de 6 ans. J'ai été en sport-étude au sein du collège de Valdahon avec l'équipe du FCVV (Régional 2). Par la suite, j'ai integré l'équipe de l'AS Avoudrey (Départemental 2).
+    </p>
+  </div>
+
+  <!-- Plongée Nautique -->
+  <div class="bg-white rounded-xl shadow-md p-6 mb-10 max-w-2xl mx-auto">
+    <h3 class="text-2xl font-semibold mb-4 text-blue-800 flex items-center gap-2">
+      Plongée Nautique
+    </h3>
+    <div class="flex flex-col items-center mb-4">
+      <img src="../images/Certificat_plongée.jpg" alt="Certificat de Plongée" class="h-40 w-auto rounded shadow mb-2">
+      <span class="text-gray-600 text-sm">Mon certificat de plongée</span>
+    </div>
+    <p class="text-gray-700">
+      Je possède un certificat de plongée me permettant de descendre 12m en profondeur seul.
+    </p>
+  </div>
+
+  <!-- Ski Alpin -->
+  <div class="bg-white rounded-xl shadow-md p-6 mb-10 max-w-2xl mx-auto">
+    <h3 class="text-2xl font-semibold mb-4 text-blue-800 flex items-center gap-2">
+      Ski Alpin
+    </h3>
+    <p class="text-gray-700">
+      Depuis petit, je pratique du ski dans différentes stations des montagnes du Jura et de Savoie.
+    </p>
+  </div>
+
+</main>
+
+<footer class="bg-gray-800 text-gray-400 py-6 text-center mt-12">
+  <p>&copy; 2025 - GALLARDO Pierre - Étudiant BTS SIO</p>
+  <p>
+    <a href="contact.html" class="hover:text-white">Contact</a> • 
+    <a href="https://www.lyceepergaud.fr/" target="_blank" class="hover:text-white">Lycée Louis Pergaud</a> • 
+    <a href="#top" class="hover:text-white">Retour en haut</a>
+  </p>
+</footer>
+
+</body>
+</html>

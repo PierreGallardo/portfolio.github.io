@@ -6,6 +6,41 @@
   <title>Veille Technologique - Portfolio Gallardo Pierre</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
+<style>
+        /* Styles pour la présentation du flux */
+        #rss-feed {
+            font-family: sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .feed-item {
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+        }
+        .feed-item:last-child {
+            border-bottom: none;
+        }
+        .feed-item-title a {
+            font-size: 1.2em;
+            font-weight: bold;
+            text-decoration: none;
+            color: #333;
+        }
+        .feed-item-title a:hover {
+            text-decoration: underline;
+        }
+        .feed-item-description {
+            color: #666;
+            margin-top: 5px;
+        }
+        .feed-item-date {
+            font-size: 0.8em;
+            color: #999;
+            margin-top: 5px;
+        }
+    </style>
+
 <body class="bg-gray-100 text-gray-900">
 
 <header class="bg-gray-900 text-white py-2 shadow-md">
@@ -115,6 +150,6 @@
     <a href="#top" class="hover:text-white">Retour en haut</a>
   </p>
 </footer>
-<script src="rss-reader.js"></script>
+<script src="../rss-reader.js"></script>
 </body>
 </html>
